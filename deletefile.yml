@@ -1,0 +1,12 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: Delete file 
+      file:
+        name: /home/ansadmin/test/file1.txt
+        state: absent
+    - name: Delete directory
+      file:
+        name: /home/ansadmin/test
+        state: absent

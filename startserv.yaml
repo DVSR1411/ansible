@@ -1,0 +1,10 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: Start httpd
+      service:
+        name: httpd
+        state: started
+
+# To check whether httpd server is running, use command ps -ef | grep httpd

@@ -1,0 +1,10 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: Start httpd
+      service:
+        name: httpd
+        state: stopped
+
+# To check whether httpd server stopped, use command ps -ef | grep httpd

@@ -1,0 +1,12 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: Uninstall git
+      yum:
+        name: git
+        state: removed
+    - name: Uninstall httpd
+      yum:
+        name: httpd
+        state: removed

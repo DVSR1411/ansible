@@ -1,0 +1,10 @@
+---
+- hosts: all
+  become: true
+  gather_facts: no
+  vars_files:
+    - users.yml
+  tasks:
+    - name: Create user
+      user:
+        name: "{{ user }}"

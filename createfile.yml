@@ -1,0 +1,12 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: Create directory
+      file:
+        name: /home/ansadmin/test
+        state: directory
+    - name: Create file
+      file:
+        name: /home/ansadmin/test/file1.txt
+        state: touch
